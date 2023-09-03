@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+#game {
+  width: 100%;
+  height: 100vh;
+  background: url('road.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  animation: car22 linear infinite;
+}
+
+
+/*
+@keyframes car22 {
+  0% {
+    
+    top: 0px;
+  }
+
+  100% {
+   
+    top: -760px;
+  }
+}
+*/
+
+
+
+
+#car2 {
+  width: 100px;
+  height: 100px;
+  background: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+  animation: car2 4s linear infinite;
+
+}
+
+#car2 img {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes car2 {
+  0% {
+    transform: rotate(0deg);
+    top: 0px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    top: 760px;
+  }
+}
+
+
+
+
+
+#car1 {
+  height: 100px;
+  width: 100px;
+  background: none;
+  position: relative;
+  top: 520px;
+  left: 130px;
+
+}
+
+#car1 img {
+  height: 100%;
+  width: 100%;
+}
+
+#gameover {
+  display: none;
+}
+
+#gameover h3 {
+  text-align: center;
+}
+
+#gameover p {
+  text-align: center;
+}
+
+#gameover button {
+  margin-left: 120px;
+  padding: 10px 40px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background: #2b323d;
+  color: #fff;
+}
+
+#score2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #fff;
+
+}
+
+.buttons button {
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+
+}
+
+.buttons button:hover {
+  background: coral;
+  color: #fff;
+}
+
+
+
+
+
+
+#car3 {
+  width: 100px;
+  height: 100px;
+  background: none;
+  position: absolute;
+  top: -100px;
+  right: 0;
+  transform: rotate(0deg);
+  animation: car3 3s linear infinite 10s;
+
+}
+
+#car3 img {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes car3 {
+  0% {
+    transform: rotate(0deg);
+    top: -100px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    top: 760px;
+  }
+}
+
+
+#preloader {
+  background: #2b323d url('background1.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  height: 860px;
+  width: 100%;
+  z-index: 100;
+  margin-top: -50px;
+}
+
+#star {
+  width: 100px;
+  height: 100px;
+  background: none;
+  position: absolute;
+  top: -100px;
+  right: 130px;
+  transform: rotate(0deg);
+  animation: star 2s ease-out infinite 50s;
+}
+
+
+#star img {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+    top: -100px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    top: 760px;
+  }
+}
+
+
+
+.buttonX {
+  border: 4px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  background: rgba(235, 234, 233, 0.5);
+  
+  backdrop-filter: blur(1.5px);
+  position: absolute;
+  top: 670px;
+  left: 300px;
+  z-index: 1;
+}
+
+.timer {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba( 208, 2, 27, 0.65 );
+  backdrop-filter: blur( 1.6px );
+  position: absolute;
+  z-index: 1;
+  top: 670px;
+  left: 300px;
+  border: 1px solid #000;
+}
+
+
+#carX {
+  height: 100px;
+  width: 100px;
+  background: none;
+  position: absolute;
+  top: 620px;
+  left: 130px;
+  display: "none";
+}
+
+#carX img {
+  height: 100%;
+  width: 100%;
+  display: "none";
+}

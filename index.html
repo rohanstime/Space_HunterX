@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Space Hunter</title>
+  <link rel="shortcut icon" href="fav91.ico" type="image/x-icon" />
+
+  <!-- HTML -->
+
+  <!--game owner Muhammad rohan / -->
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/97e7949272.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+
+
+  <div class="timer"></div>
+
+  <button onclick="myFunction()" class="buttonX"></button>
+
+
+
+  <div id="game" id="mygame">
+    
+    <img src="bg20.jpg" onclick="myFun2()" style="position: absolute; top: 200px; right: 0; max-width: 15px; border-radius: 50%; border: 2px solid #fff">
+    
+    <img src="bg30.jpg" onclick="myFun3()" style="position: absolute; top: 230px; right: 0; max-width: 15px; border-radius: 50%; border: 2px solid #fff">
+    
+    <div id="car2">
+      <img src="car2.png">
+    </div>
+
+    <div id="car1">
+      <img src="rocket.png">
+    </div>
+
+    <div id="carX">
+      <img src="rocket.png" id="divX">
+    </div>
+
+
+    <div id="star">
+      <img src="star.png">
+    </div>
+
+    <div id="car3">
+      <img src="pluto.png">
+    </div>
+
+    <div class="buttons" style="position: absolute; bottom: 100px; display: flex; align-items: center; justify-content: space-around; width: 100%;">
+      <button type="button" onclick="moveleft()" id="btn1"><i class="fa-solid fa-angle-left"></i></button>
+      <button type="button" onclick="moveright()" id="btn2"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+
+    <div style="background: red; border-radius: 50%; outline: none; border: none">
+      <img src="pause-circle.png" style="max-width: 30px; position: absolute; top: 20px; left: 10px; color: #fff; background: #2b323d; border-radius: 50%; outline: none; border: none" id="controlButton">
+    </div>
+    <!--
+      <img src="play-circle.png" style="max-width: 30px; position: absolute; top: 10px; color: #fff; margin-left: 30px; display: none" id="playButton">
+      -->
+
+  </div>
+
+
+
+  <div id="gameover">
+    <h3>Game Over</h3>
+    <p id="score"></p>
+    <button type="button" onclick="location.reload()">Restart</button>
+  </div>
+
+  <p id="score2" style="display: block">Score: </p>
+
+
+
+
+  <script src="main.js"></script>
+  <script src="play.js"></script>
+  <script src="changeBg.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <script>
+    var loader = document.querySelector("#preloader");
+
+    window.addEventListener("load", function() {
+      loader.style.display = "none";
+
+    });
+  </script>
+
+
+  <script>
+    var times = document.querySelector(".timer");
+    var div = document.getElementById("car1");
+    var divX = document.getElementById("divX");
+    var div2 = document.getElementById("myDiv2");
+    var button = document.querySelector(".buttonX");
+
+    times.style.display = "none";
+    div.style.display = "none";
+    //carX.style.display = "none";
+    function myFunction() {
+      divX.style.display = "block";
+      divX.src = "calcu.png";
+      divX.style.opacity = .8;
+      button.style.display = "none";
+      times.style.display = "block";
+      div.style.left = "1px";
+      div.style.display = "none";
+
+      setTimeout(function() {
+        div.style.opacity = "1";
+        div.style.display = "block";
+        div.style.left = "";
+
+        divX.style.display = "none";
+      }, 7000);
+      setTimeout(function() {
+        times.style.display = "none";
+        button.style.display = "block";
+
+      }, 15000);
+    }
+  </script>
+
+</body>
+
+</html>
